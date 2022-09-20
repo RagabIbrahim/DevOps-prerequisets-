@@ -1,0 +1,28 @@
+// list dir and files
+$ ls /home/thor/test_dir
+
+// create empty file
+$ touch empty_file.txt
+
+// create file and add content to it
+$ echo "This is not empty file" > contents_file.txt
+
+// create empty dir 
+$ mkdir /home/thor/asia/india/bangalore
+
+// Create directory hierarchy
+$ mkdir -p /home/thor/asia/india/bangalore
+
+
+// Copy target file to target directory
+$ cp /home/thor/asia/bangalore.txt /home/thor/asia/india/bangalore
+
+// Copy source directory to target location
+$ cp -rsf /home/thor/asia/india/bangalore /home/thor/
+
+
+// Remove target file from target directory
+$ rm /home/thor/asia/bangalore.txt
+
+// Remove target directory and its contents.
+rm -r /home/thor/asia/india/bangalore
