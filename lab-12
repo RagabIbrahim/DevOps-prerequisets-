@@ -1,0 +1,32 @@
+// check user exist
+$ whoami
+
+// What is id of thor user?
+$ id thor
+
+// Which command you will use to switch to ansible user?
+$ su ansible
+
+// which command to login to thor with ip 192.168.1.9
+$ ssh thor@192.168.1.9
+
+// Which of the following file is present under /root directory?
+$ sudo ls /root
+
+// downlood file over internet through command
+$ wget     or    $ curl
+
+// Download target file to host01
+// target file name : dummy.pdf
+// target file URL: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+// target directory: /home/thor
+$ wget https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+
+// Where can you find OS information of linux servers?
+$ /etc/*release*
+
+// Which OS is running on host01 server?
+$ cat /etc/*release*
+
+// Which version of CentOS running on host01 server?
+$ cat /etc/*release*
