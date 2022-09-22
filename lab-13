@@ -1,0 +1,25 @@
+// What is full form of RPM in linux environment
+Red Hat Package Manager
+
+// Which of the following rpm is not installed on host01?
+
+
+// Install ftp with rpm.
+// We have downloaded rpm file inside /opt/ directory.
+$ sudo yum install ftp
+
+//Remove ftp with rpm.
+//You can get exact package name by rpm -qa | grep ftp
+$ sudo rpm -e ftp
+
+//Install ansible with yum.
+$ sudo yum install ansible
+
+// Which version of ansible is installed with yum on host01 server in previous step?
+$ ansible --version
+
+//Remove ansible with yum as we will install lower version in next step
+$ sudo yum remove ansible
+
+// Install ansible with yum but version should be 2.8.11.
+$ sudo yum install -y ansible-2.8.11
