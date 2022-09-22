@@ -1,0 +1,36 @@
+// What is the status of httpd service?
+$ systemctl status httpd
+
+//Lets start httpd service so that our host01 can act as web server.
+$ sudo systemctl start httpd.service
+
+//Now we have to enable httpd service so that it starts automatically when system boots up and we dont need to manually start the service.
+$ sudo systemctl enable httpd
+
+//Now we decided to use dedicated python flask app instead of apache so please stop httpd service.
+$ sudo systemctl stop httpd
+
+//Now we have to disable httpd service so that it doesn't start automatically when system boots up.
+$ sudo systemctl disable httpd
+
+//We have added a new python flask based service called app. In which systemd unit file is this service configured?
+$ systemctl status app     // run this command and found answer file
+
+//What is the status of app service?
+$ systemctl status app    
+
+//Look at the service configuration file (systemd unit file) and identify which script is run before the app service starts.
+solution // Check the value for the directive ExecStartPre in the file /usr/lib/systemd/system/app.service
+OR
+simply run the command - systemctl cat app.service and see the value.
+$ systemctl cat app.service
+
+//Which script is run after app service starts?
+solution same before  but check   ExecStartPost
+$ systemctl cat app.service
+
+// Now lets start app service so that our host01 can act as Flask server as we intended.
+$ sudo systemctl start app
+
+// Now we have to enable app service so that it starts automatically when system boots up and we dont need to manually start the service.
+$ sudo systemctl enable app
